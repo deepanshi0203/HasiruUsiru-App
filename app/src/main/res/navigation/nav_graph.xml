@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.hasiruusiru.app.ui.home.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_home_to_addTree"
+            app:destination="@id/addTreeFragment"/>
+        <action
+            android:id="@+id/action_home_to_map"
+            app:destination="@id/mapFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/addTreeFragment"
+        android:name="com.hasiruusiru.app.ui.addtree.AddTreeFragment"
+        android:label="Tag Tree"/>
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.hasiruusiru.app.ui.map.MapFragment"
+        android:label="Map"/>
+
+    <fragment
+        android:id="@+id/speciesGuideFragment"
+        android:name="com.hasiruusiru.app.ui.speciesguide.SpeciesGuideFragment"
+        android:label="Species Guide"/>
+
+</navigation>

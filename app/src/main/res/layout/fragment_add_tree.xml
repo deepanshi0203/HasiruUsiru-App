@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tag a Tree"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/green_primary"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fill in the details and tap Save"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- GPS Location -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GPS Location"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_get_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📍 Get My Location"
+            app:backgroundTint="@color/green_primary"
+            app:cornerRadius="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_location_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location not fetched yet"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Species -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tree Species"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_species"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/spinner_bg"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Empty Pit Checkbox -->
+        <CheckBox
+            android:id="@+id/checkbox_empty_pit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔴 This is an Empty Pit (no tree here)"
+            android:textSize="14sp"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="16dp"
+            android:buttonTint="@color/green_primary"/>
+
+        <!-- Tree Girth -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_girth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tree Girth (circumference in cm)"
+            android:layout_marginBottom="20dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeColor="@color/green_primary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_girth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Tree Health -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tree Health"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/rg_health"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton
+                android:id="@+id/rb_health_good"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Good"
+                android:checked="true"
+                android:buttonTint="@color/green_primary"
+                android:layout_marginEnd="16dp"/>
+
+            <RadioButton
+                android:id="@+id/rb_health_fair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fair"
+                android:buttonTint="@color/green_primary"
+                android:layout_marginEnd="16dp"/>
+
+            <RadioButton
+                android:id="@+id/rb_health_poor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Poor"
+                android:buttonTint="@color/green_primary"/>
+        </RadioGroup>
+
+        <!-- Street Address -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Street / Landmark (optional)"
+            android:layout_marginBottom="28dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeColor="@color/green_primary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Save Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save_tree"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="💾 Save Tree"
+            android:textSize="16sp"
+            app:backgroundTint="@color/green_primary"
+            app:cornerRadius="12dp"/>
+
+    </LinearLayout>
+</ScrollView>
